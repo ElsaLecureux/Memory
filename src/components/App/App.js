@@ -6,10 +6,10 @@ import './App.scss';
 import frog from "./frog.jpg"
 
 function App() {
-  //TODO revoir le state; utiliser classNames pour ajouter une class sur l'élément à flip, (s'inspirer du zen-mode du blog E07)
   const [flipped, setFlipped] = useState(false);
   function FlipCard () {
-    setFlipped(!flipped);
+    console.log('clicked')
+    setFlipped(!flipped)
   }
   return (
     <div className="App">
@@ -18,7 +18,7 @@ function App() {
       </header>
       <main>
         <div className="cards_board">
-          <div className={classNames("card", {'' : flipped })} onClick={FlipCard} >
+          <div className={classNames("card", {'active-side' : flipped })} onClick={FlipCard} >
             <div className="card-front card-side"></div>
             <div className="card-back card-side">
               <img className="image_back-side" src={frog} alt="" />

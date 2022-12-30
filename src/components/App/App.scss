@@ -34,6 +34,14 @@
       height: 20em;
       margin: 3rem;
     }
+    .active-side {
+      .card-front {
+        transform: rotateY(180deg);
+    }
+      .card-back {
+        transform: rotateY(0deg);
+    }
+    }
     .card:hover {
       cursor: pointer;
     }
@@ -47,11 +55,16 @@
       width: 100%;
       height: 100%;
       box-sizing: border-box;
+      transform-style: preserve-3d;
+      transition: -webkit-transform ease 500ms;
+      transition: transform ease 500ms;
     }
     .card-front {
       background-color: orange;
+      transform: rotateY(0deg);
     }
     .card-back {
+      transform: rotateY(-180deg);
       .image_back-side {
         width: 100%;
         height: 100%;
