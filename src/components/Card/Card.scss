@@ -22,7 +22,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    border: solid 5px orangered;
     border-radius: 20px;
     width: 100%;
     height: 100%;
@@ -32,7 +31,9 @@
     transition: transform ease 500ms;
   }
   .card-front {
-    background-color: orange;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(238, 236, 112, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(24, 99, 212, 0.918), rgba(0,0,255,0) 70.71%);
     transform: rotateY(0deg);
   }
   .card-back {
