@@ -1,14 +1,14 @@
 import { useState } from "react";
-import classNames from 'classnames';
 
 import './App.scss';
 
-import frog from "./frog.jpg"
+import Card from "../Card/Card"
+import cards from "../../data/cards"
 
 function App() {
+  const fist_randomCards = cards.sort((a, b) => 0.5 - Math.random());
   const [flipped, setFlipped] = useState(false);
   function FlipCard () {
-    console.log('clicked')
     setFlipped(!flipped)
   }
   return (
@@ -16,14 +16,16 @@ function App() {
       <header className="App-header">
       <h1 className="title">Jeu de Memory</h1>
       </header>
-      <main>
+      <main className="App-main">
         <div className="cards_board">
-          <div className={classNames("card", {'active-side' : flipped })} onClick={FlipCard} >
-            <div className="card-front card-side"></div>
-            <div className="card-back card-side">
-              <img className="image_back-side" src={frog} alt="" />
-            </div>
-          </div>
+        {fist_randomCards.map((card) => (
+          <Card 
+          key={card.id}
+          FlipCard={FlipCard}
+          {...card}
+          />
+          
+          ))}
         </div>
       </main>
      
