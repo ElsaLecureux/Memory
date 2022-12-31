@@ -5,6 +5,7 @@ import './App.scss';
 import Card from "../Card/Card"
 import cards from "../../data/cards"
 
+//TODO limiter à deux cartes retournées à la fois, voir si cartes sont les meme (name = name), CSS pour rendre plus joli, si cartes identiques => à voir...
 function App() {
   const fist_randomCards = cards.sort((a, b) => 0.5 - Math.random());
   const [flipped, setFlipped] = useState(false);
