@@ -7,7 +7,7 @@ import cards from "../../data/cards"
 
 //TODO limiter à deux cartes retournées à la fois, voir si cartes sont les meme (name = name), CSS pour rendre plus joli, si cartes identiques => à voir...
 function App() {
-  const fist_randomCards = cards.sort((a, b) => 0.5 - Math.random());
+  const randomCards = cards.sort((a, b) => 0.5 - Math.random());
   const [flipped, setFlipped] = useState(false);
   function FlipCard () {
     setFlipped(!flipped)
@@ -19,7 +19,7 @@ function App() {
       </header>
       <main className="App-main">
         <div className="cards_board">
-        {fist_randomCards.map((card) => (
+        {randomCards.map((card) => (
           <Card 
           key={card.id}
           FlipCard={FlipCard}
