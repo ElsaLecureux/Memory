@@ -16,8 +16,6 @@ Photo de <a href="https://unsplash.com/ja/@jcotten?utm_source=unsplash&utm_mediu
 * Jellyfish
 Photo de <a href="https://unsplash.com/@kkkaran?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Karan Karnik</a> sur <a href="https://unsplash.com/fr/s/photos/animal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
-Photo de <a href="https://unsplash.com/@jakobowens1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jakob Owens</a> sur <a href="https://unsplash.com/fr/s/photos/animal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
 * Penguins
 Photo de <a href="https://unsplash.com/@mudmanuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paul Carroll</a> sur <a href="https://unsplash.com/fr/s/photos/animal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
@@ -29,8 +27,6 @@ Photo by <a href="https://unsplash.com/@mattkerslake?utm_source=unsplash&utm_med
 
 * Wolf
 Photo de <a href="https://unsplash.com/@nineteen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrew Ly</a> sur <a href="https://unsplash.com/fr/s/photos/animal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-Photo de <a href="https://unsplash.com/@gkumar2175?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ganapathy Kumar</a> sur <a href="https://unsplash.com/fr/s/photos/animal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 * Seahorse
 Photo de <a href="https://unsplash.com/@davidclode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">David Clode</a> sur <a href="https://unsplash.com/fr/s/photos/animal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
