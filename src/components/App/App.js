@@ -1,17 +1,48 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 import './App.scss';
 
 import Card from "../Card/Card"
 import cards from "../../data/cards"
 
-//TODO limiter à deux cartes retournées à la fois, voir si cartes sont les meme (name = name), CSS pour rendre plus joli, si cartes identiques => à voir...
 function App() {
-  const randomCards = cards.sort((a, b) => 0.5 - Math.random());
-  const [flipped, setFlipped] = useState(false);
-  function FlipCard () {
-    setFlipped(!flipped)
+  const [randomCards, setRandomCards] = useState([]);
+  
+  useEffect(() => {
+    setRandomCards(
+     cards.sort((a, b) => 0.5 - Math.random())
+    );
+  }, [setRandomCards])
+
+  //fin de partie
+  /*useEffect(() => {
+    
+  }, [setRandomCards])*/
+  const [cardsFlipped, setCardsFlipped] = useState([]);
+  const [cardsWon, setCardsWon] = useState([]);
+  function handleClick (card_index) {
+    const nextCardsFlipped = [card_index];
+
+    if (cardsFlipped.length === 2) {
+      if (randomCards[cardsFlipped[0]].name === randomCards[cardsFlipped[1]].name){
+        setCardsWon([
+          ...cardsWon,
+          cardsFlipped[0],
+          cardsFlipped[1],
+        ]);
+
+        if (cardsWon.length + 2 >= randomCards.length) {
+          //gagné
+        }
+      } else {
+        //perdre une vie
+      }
+    } else if (cardsFlipped.length < 2) {
+      nextCardsFlipped.push(...cardsFlipped);
+    }
+    setCardsFlipped(nextCardsFlipped);
   }
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -19,11 +50,13 @@ function App() {
       </header>
       <main className="App-main">
         <div className="cards_board">
-        {randomCards.map((card) => (
-          <Card 
-          key={card.id}
-          FlipCard={FlipCard}
-          {...card}
+        {randomCards.map((card, i) => (
+          <Card
+            key={card.id}
+            {...card}
+            index = {i}
+            handleClick = {handleClick}
+            active = {cardsFlipped.includes(i) || cardsWon.includes(i)}
           />
           
           ))}
